@@ -5,42 +5,86 @@
   list-style: none;
 }
 #root {
-  padding: 1rem;
+  padding: 2rem;
+}
+body {
+  font-family: "IBM Plex Mono", sans-serif;
+  background-color: #f7f7f7;
 }
 nav {
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #ccc;
+  margin-bottom: 2.4rem;
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid #bcbcbc;
 }
-
 nav ul {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap:6.4rem;
+  font-size: 1.4rem;
 }
 a {
   text-decoration: none;
   color: black;
 }
-
 a.active {
   font-weight: 700;
   color: blue;
 }
-
-#dashboard {
-  background-color: #f5f5f5;
+.Verification{
+  font-size: 1.8rem;
+}
+.custom-input{
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-bottom: 2px solid rgb(99, 99, 99);
+  border-radius: 2px;
+  padding: 5px;
+  display: inline-block;
+  margin: 5rem 1rem;
+  font-size: 1.4rem;
+}
+.cart{
+  width: 30rem;
+  padding:1rem ;
+}
+.btn-parent{
   display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  font-family: "IBM Plex Mono", sans-serif;
 }
-#sidebar {
-  background-color: #dedede;
+button{
+  display: inline-block;
+  padding:0.7rem;
+  border:1px solid #9cbdff;
+  background-color: transparent;
+  border-radius: 4px;
+  color: #6698fa;
+  font-weight: 700;
 }
-#sidebar a {
-  display: block;
-  padding: 0.5rem 1rem;
+.btn-parent>:nth-of-type(1){
+  border:1px solid #fc9898;
+  color: #ff5454;
+}
+h2{
+  margin: 4.6rem 0;
+}
+p{
+  font-size: 1.2rem;
+  color: #6698fa;
+  margin: 2.4rem  0rem;
+  text-align: right;
+  cursor: pointer;
 }
 
-#sidebar a.active {
-  background-color: rgb(88, 88, 235);
-  color: white;
+textarea:focus, input:focus{
+  outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
 }
