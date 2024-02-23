@@ -1,11 +1,19 @@
-
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-
+import Products from "./pages/Products";
+import Users from "./pages/Users";
+import Verification from "./pages/Verification";
+import APPNav from "./components/APPNav";
 
 function App() {
   return (
     <div>
-<h1>07: React Router DOM starter file</h1>
+    <APPNav />
+    <Routes>
+      <Route path="/" element={<Products />} />
+      <Route path="/Users" element={<Users />} />
+      <Route path="/Verification" element={<Verification />} />
+    </Routes>
     </div>
   );
 }
