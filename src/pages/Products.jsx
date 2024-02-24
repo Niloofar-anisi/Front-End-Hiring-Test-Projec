@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
+import React from 'react'
 
-function Products(){
-    return <div>
-        <h2>products</h2>
-    </div>;
+function Products () {
+  return (
+    <div>
+      <h2>products</h2>
+    </div>
+  )
 }
-
-export default Products;
+export default Products

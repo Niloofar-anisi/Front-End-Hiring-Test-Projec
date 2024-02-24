@@ -1,49 +1,45 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react'
 
 const Verification = () => {
-    
-  const inputs = Array.from({ length: 4 }, () => useRef());
-  const [digits, setDigits] = useState(['', '', '', '']);
+  const inputs = Array.from({ length: 4 }, () => useRef())
+  const [digits, setDigits] = useState(['', '', '', ''])
 
   useEffect(() => {
-    inputs[0].current.focus();
-  }, []); // فقط یک بار در ابتدا فوکوس روی اولین اینپوت
+    inputs[0].current.focus()
+  }, [])
 
   const handleInput = (index, e) => {
-    let value = e.target.value;
-    
+    let value = e.target.value
     if (!/^\d$/.test(value)) {
-      return; // فقط عدد را قبول کند
+      return
     }
 
-    const newDigits = [...digits];
-    newDigits[index] = value;
-    setDigits(newDigits);
+    const newDigits = [...digits]
+    newDigits[index] = value
+    setDigits(newDigits)
 
-    
     if (index < 3 && value !== '') {
-      inputs[index + 1].current.focus();
+      inputs[index + 1].current.focus()
     }
-  };
-
+  }
 
   const clearInputs = () => {
-    setDigits(['', '', '', '']);
-    inputs[0].current.focus(); 
-  };
-
+    setDigits(['', '', '', ''])
+    inputs[0].current.focus()
+  }
 
   const handleVerify = () => {
-   console.log("send.code")
-  };
+    const code = digits.join('').trim()
+    if (code.length < 4) {
+      alert('Please enter the complete verification code.')
+    } else {
+      console.log('Sending code to server: ' + code)
+    }
+  }
 
-  
-  
-
-
-  return (    
+  return (
     <div className='cart'>
-        <h2>Enter Your 4 Number Verification Code</h2>
+      <h2>Enter Your 4 Number Verification Code</h2>
       <div>
         {digits.map((digit, index) => (
           <input
@@ -52,7 +48,7 @@ const Verification = () => {
             type="number"
             min={0}
             max={9}
-            maxLength={1} //  یک حرف را بگیره
+            maxLength={1}
             value={digit}
             onChange={(e) => handleInput(index, e)}
             className='custom-input'
@@ -60,13 +56,12 @@ const Verification = () => {
         ))}
       </div>
       <div className='btn-parent'>
-      <button onClick={clearInputs}>CLEAR </button>
-      <button onClick={handleVerify}>VERIFY CODE</button>
+        <button onClick={clearInputs}>CLEAR </button>
+        <button onClick={handleVerify}>VERIFY CODE</button>
       </div>
-      
       <p>Correct phone number</p>
     </div>
-  );
-};
+  )
+}
 
-export default Verification;
+export default Verification

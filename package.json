@@ -2,10 +2,12 @@
   "name": "rrd-basics",
   "private": true,
   "version": "0.0.0",
+
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lintmyprogram": "eslint src/main.jsx"
   },
   "dependencies": {
     "react": "^18.0.0",
@@ -16,6 +18,16 @@
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@vitejs/plugin-react": "^1.3.0",
+    "eslint": "^8.57.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.33.2",
     "vite": "^2.9.9"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/Niloofar-anisi/Front-End-Hiring-Test-Projec.git",
+  "author": "Niloofar Anisi <n.anisi@yahoo.com>",
+  "license": "MIT"
 }

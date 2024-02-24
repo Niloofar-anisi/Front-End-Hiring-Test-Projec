@@ -1,11 +1,12 @@
-import { Route, Routes } from "react-router-dom";
-import "./App.css";
-import Products from "./pages/Products";
-import Users from "./pages/Users";
-import Verification from "./pages/Verification";
-import APPNav from "./components/APPNav";
+import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import './App.css'
+import Products from './pages/Products'
+import Users from './pages/Users'
+import Verification from './pages/Verification'
+import APPNav from './components/APPNav'
 
-function App() {
+function App () {
   return (
     <div>
     <APPNav />
@@ -15,7 +16,7 @@ function App() {
       <Route path="/Verification" element={<Verification />} />
     </Routes>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
